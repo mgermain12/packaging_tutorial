@@ -1,4 +1,9 @@
-import biketrauma
+import pandas as pd
+import numpy as np
 
-df = biketrauma.Load_db().save_as_df()
-biketrauma.plot_location(biketrauma.get_accident(df))
+
+def get_accident(df_bikes, log_scale=True):
+    gd = df_bikes.groupby(["departement"]).size()
+    if log_scale:
+        gd = np.log(gd)
+    return gd
