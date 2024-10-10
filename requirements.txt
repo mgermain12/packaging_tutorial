@@ -1,8 +1,5 @@
-tqdm
-pygal_maps_fr
-pooch
-pandas
-numpy
-pygal
-setuptools
-lxml
+numpy==2.1.2
+pandas==2.2.3
+pooch==1.7.0
+pygal==2.4.0
+setuptools==72.1.0
